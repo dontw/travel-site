@@ -1,0 +1,11 @@
+body{
+    padding:10px;
+    margin: 10px;
+    color: #2f5572;
+    -webkit-columns: 300px 2;
+       -moz-columns: 300px 2;
+            columns: 300px 2;
+}
+    body p{
+        fontsize:10px; 
+    }

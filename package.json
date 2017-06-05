@@ -1,0 +1,31 @@
+{
+  "name": "travel-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize": "^0.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-watch": "^4.3.11",
+    "postcss-nested": "^2.0.2",
+    "postcss-simple-vars": "^4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dontw/travel-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dontw/travel-site/issues"
+  },
+  "homepage": "https://github.com/dontw/travel-site#readme"
+}
