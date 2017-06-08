@@ -5,13 +5,14 @@ var cssvars = require('postcss-simple-vars');
 var nested = require('postcss-nested');
 var cssImport = require('postcss-import');
 var mixins = require('postcss-mixins');
+var hexrgba = require('postcss-hexrgba');
 
 gulp.task('styles', function(){
     //設定檔案來源
     return gulp.src('./app/assets/styles/main.css')
 
     //設定來源檔案變化的filter
-    .pipe(postcss([cssImport, mixins,cssvars, nested, autoprefixer]))
+    .pipe(postcss([cssImport, mixins,cssvars, nested, hexrgba, autoprefixer]))
 
     //當遇到錯誤
     .on('error', function(errorInfo){

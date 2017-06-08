@@ -12,7 +12,7 @@ img{
     box-sizing: border-box;
 }
 
-p a{
+a{
   font-weight: 700;
   color: $mainOrange;
 }
