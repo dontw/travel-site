@@ -13,14 +13,24 @@ gulp.task('watch',function(){
     })
 
     //設定監看對象
+
+    //html
     watch('./app/index.html', function(){
         //監看對象變動執行
         browserSync.reload();
     });
 
+    //css
     watch('./app/assets/styles/**/*.css', function(){
         gulp.start('cssInject');
     });
+
+    //js
+    watch('./app/assets/scripts/**/*.js', function(){
+      //執行scripts這個task
+      gulp.start('scriptsRefresh');
+    });
+
 
 });
 
@@ -28,4 +38,8 @@ gulp.task('watch',function(){
 gulp.task('cssInject',['styles'],function(){
     return gulp.src('./app/temp/styles/main.css')
     .pipe(browserSync.stream());
+});
+
+gulp.task('scriptsRefresh',['scripts'] ,function(){
+    browserSync.reload();
 });
