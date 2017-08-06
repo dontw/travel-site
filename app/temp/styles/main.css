@@ -114,7 +114,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -665,6 +666,7 @@ a{
 .headline{
   font-weight: 300;
   font-size: 1.9rem;
+  line-height: 2.5rem;
   color: #2f5572;
 
 }
@@ -711,11 +713,15 @@ a{
   }
 
 .headline--b-margin-small{
-      margin-bottom: .5em;
+    margin-bottom: .5em;
   }
 
 .headline--b-margin-large{
-      margin-bottom: 1.6em ;
+    margin-bottom: 1.6em ;
+  }
+
+.headline--t-margin-large{
+    margin-top: 1.6em;
   }
 
 .headline--no-t-margin{
@@ -921,7 +927,7 @@ a{
 
 .feature-item__icon{
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 1rem auto;
   }
 
 @media (min-width:530px){

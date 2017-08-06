@@ -9,7 +9,7 @@
 
   &__icon{
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 1rem auto;
     @mixin atSmall{
       position: absolute;
       left: 0;
