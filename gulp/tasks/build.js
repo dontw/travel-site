@@ -12,15 +12,15 @@ gulp.task('previewDist', function(){
         notify:false,
         //where the website live
         server:{
-            baseDir: "dist" //folderName
+            baseDir: "docs" //folderName
         }
     })
 });
 
 
 //每次build之前都將dist資料夾清空
-gulp.task('deleteDistFolder', function(){
-    return del("./dist");
+gulp.task('deleteDistFolder',['icons'], function(){
+    return del("./docs");
 });
 
 //將其他重要檔案複製到dist,並排除img css js temp的檔案
@@ -38,11 +38,11 @@ gulp.task('copyGeneralFiles',['deleteDistFolder'],function(){
 
 
     return gulp.src(pathsToCopy)
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./docs'));
 });
 
 //壓縮圖片檔
-gulp.task('optimizeImages',['deleteDistFolder', 'icons'], function(){
+gulp.task('optimizeImages',['deleteDistFolder'], function(){
     //將除了前面有"!"外的圖片檔案複製到指定路徑
     return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
         .pipe(imagemin({
@@ -53,17 +53,21 @@ gulp.task('optimizeImages',['deleteDistFolder', 'icons'], function(){
             //svg 最佳化
             multipass: true
         }))
-        .pipe(gulp.dest("./dist/assets/images"));
+        .pipe(gulp.dest("./docs/assets/images"));
+});
+
+gulp.task('useminTrigger',['deleteDistFolder'],function(){
+    gulp.start("usemin");
 });
 
 //用usemin套件壓縮css js 記得在html下好註解指令
-gulp.task('usemin',['deleteDistFolder', 'styles', 'scripts'],function(){
+gulp.task('usemin',['styles', 'scripts'],function(){
     return gulp.src("./app/index.html")
         .pipe(usemin({
             css: [function(){return rev()},function(){return cssnano()}],
             js: [function(){return rev()}, function(){return uglify()}]
         }))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./docs'));
 });
 
-gulp.task('build',['deleteDistFolder', 'copyGeneralFiles','optimizeImages', 'usemin']);
+gulp.task('build',['deleteDistFolder', 'copyGeneralFiles','optimizeImages', 'usemin', 'useminTrigger']);
