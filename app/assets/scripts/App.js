@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 import MobileMenu from './modules/MobileMenu';
 import RevealOnScroll from './modules/RevealOnscroll';
 import StickyHeader from './modules/StickyHeader';
