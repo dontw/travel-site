@@ -8,10 +8,7 @@ module.exports = {
   module:{
     loaders:[
       {
-        loader: "babel-loader",
-        query:{
-          parsets:['es2015']
-        },
+        loader: 'babel-loader?presets[]=es2015',
         test: /\.js$/,
         exclude: /node_modules/
       }

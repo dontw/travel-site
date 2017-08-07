@@ -1,6 +1,7 @@
 # travel-site 旅遊網站首頁
 * 響應式設計
 * 圖片支援Retina螢幕
+* JS module 寫法
 
 ## 使用工具
 * gulp
