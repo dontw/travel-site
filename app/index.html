@@ -22,7 +22,7 @@
       </div>
       <div class="site-header__menu-content">
         <div class="site-header__btn-container">
-          <a href="#" class="btn">與我們聯繫！</a>
+          <a href="#" class="btn open-modal">與我們聯繫！</a>
         </div>
         <nav class="primary-nav primary-nav--pull-right">
           <ul>
@@ -36,6 +36,7 @@
   </header>
   <!-- NAV BAR END -->
 
+  <!-- LARGE-HERO START -->
   <div class="large-hero">
     <picture>
       <!--combine resolution and size responsive picture-->
@@ -49,11 +50,13 @@
         <h1 class="large-hero__title">Your Journey</h1>
         <h2 class="large-hero__subtitle">Begin From Here</h2>
         <p class="large-hero__description">我們提供專為您設計的客製化行程</p>
-        <p><a href="#" class="btn btn--orange btn--large">馬上開始規劃！</a></p>
+        <p><a href="#" class="btn btn--orange btn--large open-modal">馬上開始規劃！</a></p>
       </div>
     </div>
   </div>
+  <!-- LAEGE-HERO END -->
 
+  <!-- OUR-BEGINNING START -->
   <div id="our-beginning" class="page-section" data-matching-link="#our-beginning-link">
     <div class="wrapper">
       <h2 class="headline headline--centered headline--light headline--b-margin-small">我們第一個規劃的行程是<strong>為自己所量身訂做...</strong></h2>
@@ -128,7 +131,9 @@
       </div>
     </div>
   </div>
+  <!-- OUR-BEGINNING END -->
 
+  <!-- TESTIMONIALS START -->
   <div 
   id="testimonials" 
   class="page-section page-section--no-b-padding-until-large page-section--testimonials" 
@@ -180,12 +185,58 @@
       </div>
     </div>
   </div>
+  <!-- TESTIMONIALS END -->
 
+  <!-- FOOTER START -->
   <footer class="site-footer">
     <div class="wrapper">
-      <p><span class="site-footer__text">Copyright &copy; 2017 Clear View Escapes. All rights reserved. </span><a class="btn btn--orange" href="#">Get in Touch</a></p>
+      <p><span class="site-footer__text">Copyright &copy; 2017 Clear View Escapes. All rights reserved. </span>
+        <a class="btn btn--orange open-modal" href="#">與我們聯繫!</a>
+      </p>
     </div>
   </footer>
+  <!-- FOOTER END -->
+
+  <!-- MODAL START -->
+  <div class="modal">
+
+      <div class="modal__inner">
+        
+        <h2 class="section-title section-title--less-margin section-title--blue">
+          <span class="icon icon--mail section-title__icon"></span>
+          <strong>與我們<b>聯絡</b></strong>
+        </h2>
+
+        <div class="wrapper wrapper--narrow">
+          <p class="modal__description">請點選以下之聯絡方式，馬上將由本公司專人為您服務，感謝您的聯繫，祝您旅途愉快！</p>
+        </div>
+
+        <div class="social-icons">
+          <a href="#" class="social-icons__icon">
+            <span class="icon icon--facebook"></span>
+          </a>
+          <a href="#" class="social-icons__icon">
+            <span class="icon icon--twitter"></span>
+          </a>
+          <a href="#" class="social-icons__icon">
+            <span class="icon icon--instagram"></span>
+          </a>
+          <a href="#" class="social-icons__icon">
+            <span class="icon icon--youtube"></span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="modal__close">
+        X
+      </div>
+
+  </div>
+  <!-- MODAL END -->
+
+
+
   <script src="/temp/scripts/App.js"></script>
 </body>
 
