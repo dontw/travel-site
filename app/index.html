@@ -26,9 +26,9 @@
         </div>
         <nav class="primary-nav primary-nav--pull-right">
           <ul>
-            <li><a href="#our-beginning">起源</a></li>
-            <li><a href="#features">特色</a></li>
-            <li><a href="#testimonials">實際體驗</a></li>
+            <li><a href="#our-beginning" id="our-beginning-link">起源</a></li>
+            <li><a href="#features" id="features-link">特色</a></li>
+            <li><a href="#testimonials" id="testimonials-link">實際體驗</a></li>
           </ul>
         </nav>
       </div>
@@ -54,7 +54,7 @@
     </div>
   </div>
 
-  <div id="our-beginning" class="page-section">
+  <div id="our-beginning" class="page-section" data-matching-link="#our-beginning-link">
     <div class="wrapper">
       <h2 class="headline headline--centered headline--light headline--b-margin-small">我們第一個規劃的行程是<strong>為自己所量身訂做...</strong></h2>
       <h3 class="headline headline--centered headline--orange headline--small headline--narrow headline--light headline--b-margin-large">自此以來, &rsquo;我們致力於提供我們的客戶<strong>最優良的旅遊體驗</strong></h3>
@@ -85,7 +85,7 @@
       </div>
     </div>
   </div>
-  <div id="features" class="page-section page-section--blue">
+  <div id="features" class="page-section page-section--blue"  data-matching-link="#features-link">
     <div class="wrapper">
       <h2 class="section-title">
         <span class="section-title__icon icon icon--star"></span>
@@ -129,7 +129,10 @@
     </div>
   </div>
 
-  <div id="testimonials" class="page-section page-section--no-b-padding-until-large page-section--testimonials">
+  <div 
+  id="testimonials" 
+  class="page-section page-section--no-b-padding-until-large page-section--testimonials" 
+  data-matching-link="#testimonials-link">
     <div class="wrapper wrapper--no-padding-until-large">
 
       <h2 class="section-title section-title--blue">

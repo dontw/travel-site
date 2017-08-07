@@ -5,6 +5,8 @@ class RevealOnScroll{
     constructor(els, offset){
         this.itemsToReveal = els;
         this.offsetPercentage = offset;
+        
+        //init functions when class created
         this.hideInitially();
         this.createWaypoints();
     }
